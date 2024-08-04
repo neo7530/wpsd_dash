@@ -1,0 +1,155 @@
+Wi	WD	WPSD Default
+\8	A8	802.11 WiFi or other network node	
+\<	NT	Advisory, single red flag	
+/A	PA	Aid station	
+\^	DV	Aircraft	
+\.	OO	Ambiguous, question mark inside circle	
+/a	LA	Ambulance	
+/V	PV	ATV, Amateur Television	
+/O	PO	Balloon	
+\$	OE	Bank or ATM	
+/B	PB	BBS	
+/b	LB	Bicycle	
+\i	SI	Black box, point of interest	
+\b	SB	Blowing dust, sand	
+\B	AB	Blowing snow	
+/,	BM	Boy Scouts	
+/U	PU	Bus	
+/;	MS	Campground, tent	
+/C	PC	Canoe	
+/>	MV	Car	
+\c	SC	CD triangle, RACES, CERTS, SATERN	
+\+	OL	Church	
+\0	A0	Circle, IRLP / Echolink/WIRES	
+\(	OI	Cloudy	
+\C	AC	Coast Guard	
+/\	HT	DF triangle	
+/#	BD	Digipeater	
+\#	OD	Digipeater, green star	
+/p	LP	Dog	
+\D	AD	Drizzling rain	
+/%	BF	DX cluster	
+\d	SD	DX spot	
+\Q	AQ	Earthquake	
+\!	OB	Emergency	
+/o	LO	Emergency operations center	
+/E	PE	Eyeball	
+/F	PF	Farm vehicle, tractor	
+/?	MW	File server	
+/:	MR	Fire	
+/d	LD	Fire station	
+/f	LF	Fire truck	
+\)	OJ	Firenet MEO, MODIS Earth Observation	
+\w	SW	Flooding	
+\{	Q1	Fog	
+\F	AF	Freezing rain	
+\f	SF	Funnel cloud	
+\g	SG	Gale, two red flags	
+\9	A9	Gas station	
+\&	OG	Gateway station	
+\,	OM	Girl Scouts	
+/g	LG	Glider	
+/q	LQ	Grid square, 2 by 2	
+/G	PG	Grid square, 3 by 3	
+\:	NR	Hail	
+\H	AH	Haze	
+/X	PX	Helicopter	
+/&	BG	HF gateway	
+/e	LE	Horse, equestrian	
+/h	LH	Hospital	
+/H	PH	Hotel	
+/-	BN	House	
+\-	ON	House, HF antenna	
+/y	LY	House, yagi antenna	
+/[	HS	Human	
+/@	MX	Hurricane predicted path	
+\@	NX	Hurricane, Tropical storm	
+/c	LC	Incident command post	
+\?	NW	Info kiosk	
+/i	LI	IOTA, islands on the air	
+/j	LJ	Jeep	
+\K	AK	Kenwood HT	
+/l	LL	Laptop	
+/^	HV	Large aircraft	
+\L	AL	Lighthouse	
+\J	AJ	Lightning	
+/M	PM	Mac apple	
+/]	HU	Mailbox, post office	
+/m	LM	Mic-E repeater	
+/(	BI	Mobile satellite station	
+/<	MT	Motorcycle	
+\N	AN	Navigation buoy	
+/n	LN	Node, black bulls-eye	
+/N	PN	NTS station	
+/0	P0	Numbered circle: 0	
+/1	P1	Numbered circle: 1	
+/2	P2	Numbered circle: 2	
+/3	P3	Numbered circle: 3	
+/4	P4	Numbered circle: 4	
+/5	P5	Numbered circle: 5	
+/6	P6	Numbered circle: 6	
+/7	P7	Numbered circle: 7	
+/8	P8	Numbered circle: 8	
+/9	P9	Numbered circle: 9	
+\W	AW	NWS site	
+\;	NS	Park, picnic area	
+\P	AP	Parking	
+\p	SP	Partly cloudy	
+/L	PL	PC user	
+\X	AX	Pharmacy	
+/P	PP	Police car	
+/!	BB	Police station	
+/=	MU	Railroad engine	
+\`	DX	Rain	
+\I	AI	Rain shower	
+/R	PR	Recreational vehicle	
+\>	NV	Red car	
+/+	BL	Red Cross	
+\a	SA	Red diamond	
+//	BP	Red dot	
+\n	SN	Red triangle	
+/.	BO	Red X	
+/r	LR	Repeater tower	
+\R	AR	Restaurant	
+\r	SR	Restrooms	
+\O	AO	Rocket	
+/Y	PY	Sailboat	
+\S	AS	Satellite	
+/`	HX	Satellite dish antenna	
+/K	PK	School	
+/u	LU	Semi-trailer truck, 18-wheeler	
+/z	LZ	Shelter	
+\s	SS	Ship, boat	
+/s	LS	Ship, power boat	
+\y	SY	Skywarn	
+\e	SE	Sleet	
+\o	SO	Small circle	
+\E	AE	Smoke, Chimney	
+\*	OK	Snow	
+\G	AG	Snow shower	
+/*	BK	Snowmobile	
+/S	PS	Space Shuttle	
+/T	PT	SSTV	
+\h	SH	Store	
+\U	AU	Sunny	
+\k	SK	SUV, ATV	
+/I	PI	TCP/IP network station	
+/$	BE	Telephone	
+\T	AT	Thunderstorm	
+\t	ST	Tornado	
+/k	LK	Truck	
+/t	LT	Truck stop	
+\m	SM	Value sign, 3 digit display	
+/v	LV	Van	
+\V	AV	VORTAC, Navigational aid	
+\[	DS	Wall Cloud	
+/w	LW	Water station	
+\/	OP	Waypoint destination	
+/W	PW	Weather service site	
+\_	DW	Weather site	
+/_	HW	Weather station	
+/)	BJ	Wheelchair, handicapped	
+\A	AA	White box	
+/Z	PZ	MS Windows logo (eeeeewww!!!)
+\j	SJ	Work zone, excavating machine	
+/x	LX	X / Unix	

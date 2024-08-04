@@ -1,0 +1,19 @@
+<?php
+# This is an auto-generated config-file!
+# Be careful, when manual editing this!
+
+date_default_timezone_set('Europe/Berlin');
+define("MMDVMLOGPATH", "/var/log/pi-star");
+define("MMDVMLOGPREFIX", "MMDVM");
+define("YSFGATEWAYLOGPATH", "/var/log/pi-star");
+define("YSFGATEWAYLOGPREFIX", "YSFGateway");
+define("YSFGATEWAYINIPATH", "/etc");
+define("YSFGATEWAYINIFILENAME", "ysfgateway");
+define("P25GATEWAYLOGPATH", "/var/log/pi-star");
+define("P25GATEWAYLOGPREFIX", "P25Gateway");
+define("P25GATEWAYINIPATH", "/etc");
+define("P25GATEWAYINIFILENAME", "p25gateway");
+define("LINKLOGPATH", "/var/log/pi-star");
+define('TIME_FORMAT', '24');
+define('AUTO_UPDATE_CHECK', 'true');
+?>
