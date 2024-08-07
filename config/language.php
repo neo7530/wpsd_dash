@@ -1,5 +1,5 @@
 <?php
 // Set the language
-$pistarLanguage='german_de';
+$pistarLanguage='english_us';
 include_once $_SERVER['DOCUMENT_ROOT']."/lang/$pistarLanguage.php";
 ?>
