@@ -25,7 +25,7 @@ if ($callsignLookupSvc == "RadioID") {
     $callsignLookupUrl = "https://database.radioid.net/database/view?callsign=";
 }
 if ($callsignLookupSvc == "QRZ") {
-    $callsignLookupUrl = "https://www.qrz.com/db/";
+    $callsignLookupUrl = "https://fdmr.dynbox.net/users.php?callsign=";
 }
 
 ?>

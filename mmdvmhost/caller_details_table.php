@@ -31,7 +31,7 @@ if ($callsignLookupSvc == "RadioID") {
     $callsignLookupUrl = "https://database.radioid.net/database/view?callsign=";
 }
 if ($callsignLookupSvc == "QRZ") {
-    $callsignLookupUrl = "https://www.qrz.com/db/";
+    $callsignLookupUrl = "https://fdmr.dynbox.net/users.php?callsign=";
 }
 
 // get the data from the MMDVMHost logs
@@ -197,7 +197,7 @@ for ($i = 0;  ($i <= 0); $i++) { //Last 20  calls
 	    if (is_numeric($listElem[2]) !== FALSE || !preg_match('/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/', $listElem[2])) {
  		$flContent = "---";
 	    } elseif (file_exists($_SERVER['DOCUMENT_ROOT']."/images/flags/".$Flag.".png")) {
-		$flContent = "<a class='tooltip' href=\"http://www.qrz.com/db/$listElem[2]\" target=\"_blank\"><img src='/images/flags/$Flag.png?version=$versionCmd' alt='' style='height:25px;' /><span>$Name</span></a>";
+		$flContent = "<a class='tooltip' href=\"https://fdmr.dynbox.net/users.php?callsign=$listElem[2]\" target=\"_blank\"><img src='/images/flags/$Flag.png?version=$versionCmd' alt='' style='height:25px;' /><span>$Name</span></a>";
 	    } else {
 		$flContent = "---";
 	    }

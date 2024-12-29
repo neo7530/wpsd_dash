@@ -147,7 +147,7 @@ if ($active >= 1) {
 		    print "<tr>";
 		    print "<td align=\"left\">$local_time</td>";
 		    print "<td class='mono' align=\"center\">$groupz</td>";
-		    print "<td class='mono'  align=\"center\"><a href=\"http://www.qrz.com/db/$ucall\" target=\"_new\" alt=\"Lookup Callsign\">$ucall</a></td>";
+		    print "<td class='mono'  align=\"center\"><a href=\"https://fdmr.dynbox.net/users.php?callsign=$ucall\" target=\"_new\" alt=\"Lookup Callsign\">$ucall</a></td>";
 		    print "</tr>\n";
 		}
 	    }
