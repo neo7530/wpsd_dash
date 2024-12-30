@@ -62,7 +62,7 @@ for ($i = 0;  ($i <= 0); $i++) { //Last 20  calls
 		}
 	    } elseif (strpos($listElem[2], "openSPOT") !== FALSE) {
 		$callsign = $listElem[2];
-            } elseif (!preg_match('/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/', $listElem[2])) {
+            } elseif (!preg_match('/[A-Za-z].*[0-9]|[A-Za-z]|[0-9].*[A-Za-z]/', $listElem[2])) {
                 $callsign = $listElem[2];
             } else {
                 if (strpos($listElem[2],"-") > 0) {
@@ -194,7 +194,7 @@ for ($i = 0;  ($i <= 0); $i++) { //Last 20  calls
 	    }
 	    // init geo/flag class
 	    list ($Flag, $Name) = $Flags->GetFlag($listElem[2]);
-	    if (is_numeric($listElem[2]) !== FALSE || !preg_match('/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/', $listElem[2])) {
+	    if (is_numeric($listElem[2]) !== FALSE || !preg_match('/[A-Za-z].*[0-9]|[A-Za-z]|[0-9].*[A-Za-z]/', $listElem[2])) {
  		$flContent = "---";
 	    } elseif (file_exists($_SERVER['DOCUMENT_ROOT']."/images/flags/".$Flag.".png")) {
 		$flContent = "<a class='tooltip' href=\"https://fdmr.dynbox.net/users.php?callsign=$listElem[2]\" target=\"_blank\"><img src='/images/flags/$Flag.png?version=$versionCmd' alt='' style='height:25px;' /><span>$Name</span></a>";

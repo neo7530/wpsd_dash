@@ -156,7 +156,7 @@ for ($i = 0;  ($i <= $lastHeardRows - 1); $i++) {
 		}
 		// init geo/flag class
 		list ($Flag, $Name) = $Flags->GetFlag($listElem[2]);
-		if (is_numeric($listElem[2]) !== FALSE || !preg_match('/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/', $listElem[2])) {
+		if (is_numeric($listElem[2]) !== FALSE || !preg_match('/[A-Za-z].*[0-9]|[A-Za-z]|[0-9].*[A-Za-z]/', $listElem[2])) {
 		    $flContent = " ";
 		} elseif (file_exists($_SERVER['DOCUMENT_ROOT']."/images/flags/".$Flag.".png")) {
 		    $flContent = "<a class='tooltip' href=\"$callsignLookupUrl"."$callPre\" target=\"_blank\"><div style='padding: 0 12px;'><img src='/images/flags/$Flag.png?version=$versionCmd' alt='' style='height:18px;' /></div><span>$Name</span></a>";
@@ -189,7 +189,7 @@ for ($i = 0;  ($i <= $lastHeardRows - 1); $i++) {
 		    }
 		} elseif (strpos($listElem[2], "openSPOT") !== FALSE) {
 		    echo "<td align=\"left\" class='divTableCellMono'>$callPre$callSuff</td><td align=\"left\"'>&nbsp</td>";
-		} elseif (!preg_match('/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/', $listElem[2])) {
+		} elseif (!preg_match('/[A-Za-z].*[0-9]|[A-Za-z]|[0-9].*[A-Za-z]/', $listElem[2])) {
 		    if (file_exists("/etc/.CALLERDETAILS") && $testMMDVModeDMR == 1 ) {
 			if ($flContent = " " && empty($listElem[11])) {
 			    echo "<td class='noMob divTableCellMono' align=\"left\">$callPre$callSuff</td><td align=\"left\" colspan='2'>&nbsp</td>";

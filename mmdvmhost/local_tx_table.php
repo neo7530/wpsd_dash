@@ -80,7 +80,7 @@ for ($i = 0; $i < $TXListLim; $i++) {
 		}
 	    } elseif (strpos($listElem[2], "openSPOT") !== FALSE) {
 		echo "<td class='divTableCellMono' align=\"left\">$listElem[2]</td>";
-	    } elseif (!preg_match('/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/', $listElem[2])) {
+	    } elseif (!preg_match('/[A-Za-z].*[0-9]|[A-Za-z]|[0-9].*[A-Za-z]/', $listElem[2])) {
 		echo "<td class='divTableCellMono' align=\"left\">$listElem[2]</td>";
 	    } else {
 		if (strpos($listElem[2],"-") > 0) {

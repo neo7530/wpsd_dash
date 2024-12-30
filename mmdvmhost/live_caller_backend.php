@@ -42,7 +42,7 @@ for ($i = 0;  ($i <= 0); $i++) { //Last 20  calls
             // end cheesy YSF hack
             if (is_numeric($listElem[2]) !== FALSE) {
                 $listElem[2] = $listElem[2];
-            } elseif (!preg_match('/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/', $listElem[2])) {
+            } elseif (!preg_match('/[A-Za-z].*[0-9]|[A-Za-z]|[0-9].*[A-Za-z]/', $listElem[2])) {
                 $listElem[2] = $listElem[2];
             } else {
                 if (strpos($listElem[2],"-") > 0) {
@@ -196,7 +196,7 @@ if ($listElem[2] == "4000" || $listElem[2] == "9990" || $listElem[2] == "DAPNET"
 
 // init geo/flag class
 list ($Flag, $Name) = $Flags->GetFlag($listElem[2]);
-if (is_numeric($listElem[2]) || !preg_match('/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/', $listElem[2])) {
+if (is_numeric($listElem[2]) || !preg_match('/[A-Za-z].*[0-9]|[A-Za-z]|[0-9].*[A-Za-z]/', $listElem[2])) {
     $flContent = "";
 } else {
     if (file_exists($_SERVER['DOCUMENT_ROOT']."/images/flags/250px/".$Flag.".png")) {
