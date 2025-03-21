@@ -2945,10 +2945,12 @@ if (!empty($_POST)):
 		if (($_POST['mmdvmDisplayPort'] == "None") || ($_POST['mmdvmDisplayPort'] == "modem")) {
 		    $configmmdvm['TFT Serial']['Port'] = $_POST['mmdvmDisplayPort'];
 		    $configmmdvm['Nextion']['Port'] = $_POST['mmdvmDisplayPort'];
+                    $configmmdvm['Nextion']['BCPort'] = $_POST['BCPort'];
 		}
 		else {
 		    $configmmdvm['TFT Serial']['Port'] = $_POST['mmdvmDisplayPort'];
 		    $configmmdvm['Nextion']['Port'] = $_POST['mmdvmDisplayPort'];
+		    $configmmdvm['Nextion']['BCPort'] = $_POST['BCPort'];
 		}
 	    }
 	}
@@ -3570,7 +3572,7 @@ if (!empty($_POST)):
 	if (!isset($configmmdvm['POCSAG Network']['GatewayPort'])) { $configmmdvm['POCSAG Network']['GatewayPort'] = "4800"; }
 	if (!isset($configmmdvm['POCSAG Network']['ModeHang'])) { $configmmdvm['POCSAG Network']['ModeHang'] = "5"; }
 	if (!isset($configmmdvm['POCSAG Network']['Debug'])) { $configmmdvm['POCSAG Network']['Debug'] = "0"; }
-
+        if (!isset($configmmdvm['Nextion']['BCPort'])) { $configmmdvm['Nextion']['BCPort'] = "1234"; }
 	// Handle APRSGateway configs for cients that support it.
 	$configdmrgateway['APRS']['Enable'] = $DMRGatewayAPRS;
 	$configysfgateway['APRS']['Enable'] = $YSFGatewayAPRS;
@@ -4957,7 +4959,7 @@ else:
 		}
 	    }
 
-            exec('ls /dev/ | egrep -h "ttyA|ttyUSB"', $availablePorts);
+            exec('ls /dev/ | egrep -h "ttyA|ttyUSB|ttyV"', $availablePorts);
             foreach($availablePorts as $port) {
 		 echo "     <option value=\"/dev/$port\">/dev/$port</option>\n";
             }
@@ -4977,6 +4979,7 @@ else:
 	    <option <?php if ($configmmdvm['Nextion']['ScreenLayout'] == "3") {echo 'selected="selected" ';}; ?>value="ON7LDSL3">ON7LDS L3</option>
 	    <option <?php if ($configmmdvm['Nextion']['ScreenLayout'] == "4") {echo 'selected="selected" ';}; ?>value="ON7LDSL3HS">ON7LDS L3 HS</option>
 	    </select>
+		 <b>Broadcast Port:</b>(for wireless Nextion Display) <input type="text" name="BCPort" size="7" maxlength="5" value="<?php if (isset($configmmdvm['Nextion']['BCPort'])) { echo $configmmdvm['Nextion']['BCPort']; } else { echo "1234"; } ?>" />
     </td></tr>
     <tr>
 	<td align="left" rowspan="4"><a class="tooltip2" href="#">OLED Display Options:<span><b>OLED Display Options</b>If you have an OLED display, choose your options here.</span></a></td>
