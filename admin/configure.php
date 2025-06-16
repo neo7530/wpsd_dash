@@ -2111,14 +2111,13 @@ if (!empty($_POST)):
 	    $configdmrgateway['DMR Network 2']['Port'] = $dmrMasterHostArr2[2];
 	    $configdmrgateway['DMR Network 2']['Name'] = $dmrMasterHostArr2[3];
             $configdmrgateway['DMR Network 2']['TGRewrite0'] = "2,9,2,9,1";
-            $configdmrgateway['DMR Network 2']['PCRewrite0'] = "2,94000,2,4000,1001";
+            $configdmrgateway['DMR Network 2']['TGRewrite1'] = "2,16777215,1,6777215,1";
             $configdmrgateway['DMR Network 2']['TypeRewrite1'] = "1,9990,1,9990";
             $configdmrgateway['DMR Network 2']['TypeRewrite2'] = "2,9990,2,9990";
             $configdmrgateway['DMR Network 2']['PassAllPC1'] = "1";
             $configdmrgateway['DMR Network 2']['PassAllTG1'] = "1";
             $configdmrgateway['DMR Network 2']['PassAllPC2'] = "2";
             $configdmrgateway['DMR Network 2']['PassAllTG2'] = "2";
-            $configdmrgateway['DMR Network 2']['SrcRewrite1'] = "1,4000,1,9,1";
 	    if (empty($_POST['dmrNetworkOptions']) != TRUE ) {
 		$dmrOptionsLineStripped = str_replace('"', "", $_POST['dmrNetworkOptions']);
 		unset ($configmmdvm['DMR Network']['Options']);
