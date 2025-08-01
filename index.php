@@ -10,6 +10,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/config/ircddblocal.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/mmdvmhost/functions.php';
 require_once $_SERVER['DOCUMENT_ROOT'].'/config/language.php';
 
+$ip = $_SERVER['SERVER_ADDR'] ?? gethostbyname(gethostname());
 $MYCALL = strtoupper($callsign);
 $_SESSION['MYCALL'] = $MYCALL;
 
@@ -64,6 +65,14 @@ $isNewZumInstall = isset($iniData[$section][$key]) && $iniData[$section][$key] =
 	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en">
     <head>
+<style>
+  #live-gps,
+  #live-fix,
+  #live-speed {
+    color: white;
+  }
+</style>
+
 	<meta name="language" content="English" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
@@ -792,6 +801,35 @@ $isNewZumInstall = isset($iniData[$section][$key]) && $iniData[$section][$key] =
 <?php
 include 'includes/execute-background-tasks.php';
 ?>
+
+<hr>
+<div id="live-gps">Warten auf Daten...</div>
+<div id="live-fix">Fix-Status: unbekannt</div>
+
+<script>
+function ladeLiveDaten() {
+    fetch(`http://<?php echo $ip ?>:8081/status`)
+        .then(res => res.json())
+        .then(data => {
+            // Beispielhafte Felder: data.gps und data.fix
+		document.getElementById('live-gps').textContent = 'GPS: ' + data.lat.toFixed(6) + ', ' + data.lon.toFixed(6);
+		document.getElementById('live-fix').textContent = 'Fix: ' + (data.fix ? 'Ja ✔️' : 'Nein ❌');
+        })
+        .catch(err => {
+            console.error('Fehler beim Laden der Live-Daten:', err);
+            document.getElementById('live-gps').textContent = 'GPS: Fehler 😢';
+            document.getElementById('live-fix').textContent = 'Fix: Fehler 😢';
+        });
+}
+
+// Alle 5 Sekunden abrufen
+setInterval(ladeLiveDaten, 5000);
+// Und direkt einmal beim Start
+ladeLiveDaten();
+</script>
+
+
+
 <script>
 executeBackgroundTasks();
 </script>

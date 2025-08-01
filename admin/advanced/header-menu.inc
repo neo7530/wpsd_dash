@@ -116,6 +116,7 @@
 			<li class="subs"><a href="fulledit_wpaconfig.php">WiFi</a></li>
 			<li class="subs"><a href="fulledit_cron.php">System Cron</a></li>
 			<li class="subs"><a href="fulledit_rssidat.php">RSSI Data</a></li>
+			<li class="subs"><a href="fulledit_tnygps.php">TNYGPS</a></li>
 		    </ul>
 		</li>
 		
